@@ -6,20 +6,15 @@ const path =require('path')
 //connectDB
 connectDB()
 
+app.get('/', (req,res)=>{
+    res.send("API Running")
+})
 
 //init middlware
 app.use(express.json({extended:false}))
 app.use(cors())
 
-//Serve Static assets in production 
 
-if(process.env.NODE_ENV === 'production'){
-    //Set static folder
-    app.use(express.static('client/build'))
-    app.get('*', (req,res)=>{
-        res.sendFile(path.resolve(__dirname,'client', 'build' , 'index.html'))
-    })
-}
 
 //routes
 app.use('/api/quiz' , require('./routes/api/quiz'))
