@@ -1,5 +1,2 @@
 node_modules/
 config/default.json
-client/build
-client/.eslintcache
-client/node_modules
