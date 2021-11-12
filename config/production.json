@@ -1,0 +1,4 @@
+{
+    "mongoURI" : "mongodb+srv://QuizApp:quiz1234@tasks.u6kby.mongodb.net/QuizApp?retryWrites=true&w=majority"
+
+}
